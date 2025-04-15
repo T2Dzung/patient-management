@@ -8,7 +8,6 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.groups.Default;
 import lombok.AllArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
@@ -40,7 +39,7 @@ public class PatientController {
     @PutMapping("/{id}")
     @Operation(summary = "Update a new Patient")
     public PatientResponseDTO updatePatient(@PathVariable UUID id,
-    @Validated @RequestBody PatientRequestDTO patientRequestDTO) {
+                                            @Validated @RequestBody PatientRequestDTO patientRequestDTO) {
         return patientService.updatePatient(id, patientRequestDTO);
     }
 
