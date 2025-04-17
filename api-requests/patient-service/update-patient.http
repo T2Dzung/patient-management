@@ -1,9 +1,11 @@
-PUT http://localhost:4000/patients/123e4567-e89b-12d3-a456-426614174000
+PUT http://localhost:4004/api/patients/c752bef8-d2bf-4d86-960d-d4725806c6c7
 Content-Type: application/json
+Authorization: Bearer {{token}}
 
 {
-  "name": "John Doe UPDATED",
-  "email": "john.doe@example.com",
-  "address": "123 main street",
+  "name": "John Doe auth test updated",
+  "email": "test7@gmail.com",
+  "address": "123 main street22",
   "dateOfBirth": "1995-09-09"
 }
+
